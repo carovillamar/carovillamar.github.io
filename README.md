@@ -1,16 +1,24 @@
-# React + Vite
+# Portfolio Carolina
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sitio web personal construido con React + Vite.
 
-Currently, two official plugins are available:
+## Desarrollo local
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm install
+npm run dev
+```
 
-## React Compiler
+## Publicacion en GitHub Pages
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+El repositorio incluye el workflow `/.github/workflows/deploy.yml`.
 
-## Expanding the ESLint configuration
+- Cada `push` a la rama `main` ejecuta build y deploy automatico.
+- La publicacion se hace con GitHub Actions (no necesitas `gh-pages` ni comandos manuales de deploy).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Configuracion inicial (solo una vez)
+
+1. En GitHub, abre `Settings` del repositorio.
+2. Ve a `Pages`.
+3. En `Build and deployment`, selecciona `Source: GitHub Actions`.
+4. Haz `push` a `main` y espera a que termine el workflow.
